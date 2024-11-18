@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary, My Love!</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7e6f5; /* Light pink background */
+      color: #5a2a66; /* Dark purple text */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Container for everything */
+    .container {
+      width: 90%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    /* Header section with title */
+    .header {
+      background-color: #f4b9d1; /* Soft pink */
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      color: #5a2a66;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #5a2a66;
+    }
+
+    /* Button Styling */
+    button {
+      background-color: #ff6347;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff4500;
+    }
+
+    /* Gif Section */
+    .gif-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* Footer with love message */
+    .footer {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f4b9d1; /* Same soft pink as the header */
+      border-radius: 10px;
+    }
+
+    .footer p {
+      font-size: 1.2rem;
+      color: #5a2a66;
+    }
+
+    /* New message section for "I LOVE YOU" */
+    #love-message {
+      position: relative;
+      font-size: 3rem;
+      color: #ff6347;
+      font-weight: bold;
+      margin-top: 20px;
+      opacity: 0;
+      transform: scale(0);
+      transition: transform 0.6s ease, opacity 0.6s ease; /* Smooth transition */
+      z-index: 1;
+    }
+
+    /* Fireworks - Initially hidden */
+    .fireworks {
+      position: fixed;
+      top: 20%;
+      z-index: 0;
+      width: 100px;
+      height: 100px;
+      display: none; /* Initially hidden */
+    }
+
+    /* Fireworks on the left */
+    .fireworks.left {
+      left: 10%;
+    }
+
+    /* Fireworks on the right */
+    .fireworks.right {
+      right: 10%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Happy Anniversary, My Babiiii! 💖</h1>
+      <p>I love you super duper much 😘😘😘</p>
+    </header>
+
+    <section class="gif-section">
+      <!-- Embed GIF from Tenor for center -->
+      <div class="tenor-gif-embed" data-postid="14380121829815250452" data-share-method="host" data-aspect-ratio="0.991597" data-width="50%">
+        <a href="https://tenor.com/view/bubu-dudu-dudu-rubbing-bubu-gif-14380121829815250452">Bubu Dudu Dudu Rubbing Bubu GIF</a>
+        from <a href="https://tenor.com/search/bubu+dudu-gifs">Bubu Dudu GIFs</a>
+      </div>
+      <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </section>
+
+    <!-- Button to trigger the love message -->
+    <button id="love-button">CLICK ME</button>
+
+    <!-- Message displayed after button click, moved above footer -->
+    <div id="love-message">I LOVE YOU SO MUCH BABI!!! 💖</div>
+
+    <footer class="footer">
+      <p>😘😘😘😘😘😘</p>
+      <p>Can’t wait for many more anniversaries with you! 💕</p>
+    </footer>
+  </div>
+
+  <!-- Fireworks GIFs (initially hidden) -->
+  <div class="fireworks left">
+    <div class="tenor-gif-embed" data-postid="14463173" data-share-method="host" data-aspect-ratio="1" data-width="50%">
+      <a href="https://tenor.com/view/diwali-sparkles-stars-confetti-celebrate-fireworks-gif-14463173">Diwali Firecrackers Burst And Sparkle Sticker</a>
+      from <a href="https://tenor.com/search/diwali+sparkles-stickers">Diwali Sparkles Stickers</a>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  </div>
+  
+  <div class="fireworks right">
+    <div class="tenor-gif-embed" data-postid="14463173" data-share-method="host" data-aspect-ratio="1" data-width="50%">
+      <a href="https://tenor.com/view/diwali-sparkles-stars-confetti-celebrate-fireworks-gif-14463173">Diwali Firecrackers Burst And Sparkle Sticker</a>
+      from <a href="https://tenor.com/search/diwali+sparkles-stickers">Diwali Sparkles Stickers</a>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  </div>
+
+  <!-- JavaScript to show the love message and fireworks -->
+  <script>
+    const button = document.getElementById('love-button');
+    const loveMessage = document.getElementById('love-message');
+    const fireworksLeft = document.querySelector('.fireworks.left');
+    const fireworksRight = document.querySelector('.fireworks.right');
+
+    button.addEventListener('click', () => {
+      // Show love message
+      loveMessage.style.transform = 'scale(1)';
+      loveMessage.style.opacity = '1';
+
+      // Show fireworks
+      fireworksLeft.style.display = 'block';
+      fireworksRight.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
